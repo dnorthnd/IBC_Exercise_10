@@ -37,7 +37,9 @@ library(ggplot2)
 sim <- data.frame(time=1:length(N),N=N,M=M)
 ggplot(data = sim, aes(x = time, y = N)) +
   geom_line(aes(x = time, y = N), col = "skyblue") +
-  geom_line(aes(x = time, y = M), col = "firebrick2")
+  geom_line(aes(x = time, y = M), col = "firebrick2") +
+  labs(title = "Normal vs. Mutated Tumor Cell Growth", x = "time (days)",
+       y = "N (number of cells)")
               
             
 
